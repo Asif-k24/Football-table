@@ -8,58 +8,66 @@ export default function FootballTable() {
   useEffect(() => {
     fetch("/data.json")
       .then(response => response.json())
-      .then(data => setData(data))
+      .then(jsonData => {
+        if (jsonData.matches) {
+          setData(jsonData.matches)
+        } else {
+          console.log("No matches found");
+        }
+      })
       .catch(error => console.log("Error fetching data:", error))
   }, [])
 
-  const footballData = JSON.stringify(data)
-
-  // console.log({ data })
 
   return (
     <>
-      <div className='container'>
-        {/* {footballData.name} */}
+      <div className='font-type'>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Position</th>
-              <th>Club</th>
-              <th>Played</th>
-              <th>Won</th>
-              <th>Drawn</th>
-              <th>Lost</th>
-              <th>GF</th>
-              <th>GA</th>
-              <th>GD</th>
-              <th>Points</th>
-              <th>Form</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-            <td>1</td>
-            <td>Manchester City</td>
-            <td>38</td>
-            <td>27</td>
-            <td>5</td>
-            <td>6</td>
-            <td>83</td>
-            <td>32</td>
-            <td>-51</td>
-            <td>86</td>
-            <td className="form">
-              <div>W</div>
-              <div>L</div>
-              <div>W</div>
-              <div>L</div>
-              <div>W</div>
-            </td>
-            </tr>
-          </tbody>
-        </table>
-        
+        <main className='container'>
+          <table className='table-margin'>
+            <thead>
+              <tr>
+                <th>Position</th>
+                <th>Club</th>
+                <th>Played</th>
+                <th>Won</th>
+                <th>Drawn</th>
+                <th>Lost</th>
+                <th>GF</th>
+                <th>GA</th>
+                <th>GD</th>
+                <th>Points</th>
+                <th>Form</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                data.map((team, index) => {
+                  console.log(team)
+                  return (
+                    <tr key={index}>
+                      <td className='text-center'>{team.position}</td>
+                      <td>{team.club}</td>
+                      <td className='text-center'>{team.played}</td>
+                      <td className='text-center'>{team.won}</td>
+                      <td className='text-center'>{team.drawn}</td>
+                      <td className='text-center'>{team.lost}</td>
+                      <td className='text-center'>{team.gf}</td>
+                      <td className='text-center'>{team.ga}</td>
+                      <td className='text-center'>{team.gd}</td>
+                      <td className='text-center'>{team.points}</td>
+                      <td className="form">
+                        {team.form.map((result, idx) => (
+                          <div key={idx}>{result}</div>
+                        ))}
+                      </td>
+                    </tr>
+                  )
+                })
+              }
+            </tbody>
+          </table>
+        </main>
       </div>
     </>
   )
