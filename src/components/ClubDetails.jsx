@@ -4,12 +4,12 @@ export default function ClubDetails() {
 
     useEffect(() => {
         fetch("/data.json")
-            .then(response => response.json())
+            .then(res => res.json())
             .then(data => {
                 setData(data)
             })
-            .catch(error => {
-                return console.log("Error fetching data: ", error)
+            .catch(err => {
+                return console.log("Error fetching data: ", err)
             })
     }, [])
 

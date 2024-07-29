@@ -7,17 +7,17 @@ export default function FootballTable() {
 
   useEffect(() => {
     fetch("/data.json")
-      .then(response => response.json())
-      .then(jsonData => {
-        if (jsonData.matches) {
-          setData(jsonData.matches)
-        } else {
-          console.log("No matches found");
-        }
+      .then(res => res.json())
+      .then(data => {
+        setData(data)
+        console.log(data);
       })
-      .catch(error => console.log("Error fetching data:", error))
+      .catch(err => {
+        console.log("Error fetching data:", err)
+      })
   }, [])
 
+  const footballData = JSON.stringify(data)
 
   return (
     <>
@@ -41,7 +41,283 @@ export default function FootballTable() {
               </tr>
             </thead>
             <tbody>
-              {
+
+              <tr>
+                <td className='text-center'></td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+              <tr>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+                <td className='text-center'>asdafs</td>
+              </tr>
+
+
+              {/* {
                 data.map((team, index) => {
                   console.log(team)
                   return (
@@ -64,10 +340,12 @@ export default function FootballTable() {
                     </tr>
                   )
                 })
-              }
+              } */}
             </tbody>
+            
           </table>
         </main>
+
       </div>
     </>
   )
