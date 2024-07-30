@@ -18,7 +18,9 @@
         "W",
         "L",
         "W"
-      ]
+      ],
+      "logo": "/images/ManchesterCity.png"
+      
     },
     {
       "position": "2",
@@ -37,7 +39,8 @@
         "L",
         "D",
         "W"
-      ]
+      ],
+      "logo": "/images/ManchesterUnited.png"
     },
     {
       "position": "3",
@@ -56,7 +59,8 @@
         "W",
         "W",
         "W"
-      ]
+      ],
+      "logo": "/images/Liverpool.png"
     },
     {
       "position": "4",
@@ -75,7 +79,8 @@
         "L",
         "W",
         "L"
-      ]
+      ],
+      "logo": "/images/Chelsea.png"
     },
     {
       "position": "5",
@@ -94,7 +99,8 @@
         "W",
         "L",
         "L"
-      ]
+      ],
+      "logo": "/images/LeicesterCity.png"
     },
     {
       "position": "6",
@@ -113,7 +119,8 @@
         "D",
         "W",
         "W"
-      ]
+      ],
+      "logo": "/images/WesthamUnited.png"
     },
     {
       "position": "7",
@@ -132,7 +139,8 @@
         "W",
         "L",
         "W"
-      ]
+      ],
+      "logo": "/images/TottenhamHotspurs.png"
     },
     {
       "position": "8",
@@ -151,7 +159,8 @@
         "W",
         "W",
         "W"
-      ]
+      ],
+      "logo": "/images/Arsenal.png"
     },
     {
       "position": "9",
@@ -170,7 +179,8 @@
         "W",
         "W",
         "W"
-      ]
+      ],
+      "logo": "/images/LeedsUnited.png"
     },
     {
       "position": "10",
@@ -189,7 +199,8 @@
         "L",
         "W",
         "L"
-      ]
+      ],
+      "logo": "/images/Everton.png"
     },
     {
       "position": "11",
@@ -208,7 +219,8 @@
         "L",
         "W",
         "W"
-      ]
+      ],
+      "logo": "/images/AstonVilla.png"
     },
     {
       "position": "12",
@@ -227,7 +239,8 @@
         "L",
         "W",
         "W"
-      ]
+      ],
+      "logo": "/images/NewCastleUnited.png"
     },
     {
       "position": "13",
@@ -246,7 +259,8 @@
         "L",
         "L",
         "L"
-      ]
+      ],
+      "logo": "/images/Wolverhampton.png"
     },
     {
       "position": "14",
@@ -265,7 +279,8 @@
         "W",
         "L",
         "L"
-      ]
+      ],
+      "logo": "/images/CrystalPalace.png"
     },
     {
       "position": "15",
@@ -284,7 +299,8 @@
         "W",
         "L",
         "L"
-      ]
+      ],
+      "logo": "/images/SouthHampton.png"
     },
     {
       "position": "16",
@@ -303,7 +319,8 @@
         "D",
         "W",
         "L"
-      ]
+      ],
+      "logo": "/images/BrightonAndHoveAlbion.png"
     },
     {
       "position": "17",
@@ -322,7 +339,8 @@
         "L",
         "L",
         "L"
-      ]
+      ],
+      "logo": "/images/Burnley.png"
     },
     {
       "position": "18",
@@ -341,7 +359,8 @@
         "L",
         "D",
         "L"
-      ]
+      ],
+      "logo": "/images/Fullham.png"
     },
     {
       "position": "19",
@@ -360,7 +379,8 @@
         "L",
         "L",
         "L"
-      ]
+      ],
+      "logo": "/images/WestBromwichAlbion.png"
     },
     {
       "position": "20",
@@ -379,7 +399,8 @@
         "W",
         "L",
         "W"
-      ]
+      ],
+      "logo": "/images/SheffieldUnited.png"
     }
   ]
 }

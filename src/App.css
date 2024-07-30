@@ -1,13 +1,16 @@
-.font-type{
-    font-family: Arial;
+.font-type {
+    font-family: system-ui;
+    font-size: small;
+    font-weight: normal;
+    color: rgb(61, 61, 61);
 }
 
-.container{
+.container {
     max-width: max-content;
     margin: 0 auto;
 }
 
-.container table{
+.container table {
     width: 95%;
     height: 50rem;
     border-collapse: collapse;
@@ -43,34 +46,70 @@
     }
 }
 
-.text-center{
+.align-items {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.text-center {
     text-align: center;
 }
 
-.table-margin{
+.table-margin {
     margin: 1rem;
     border-style: none;
 }
 
-thead{
-    font-size: small;
+thead {
     border-style: none;
     background: #f5f5f5;
+    color: rgb(107, 107, 107);
 }
 
-th{
+th {
+    padding: 5px;
+    font-size: smaller;
     font-weight: normal;
 }
 
-.form{
-    text-align: center;
+.bordered-bottom-row-lightgrey {
+    border-bottom: 1px solid rgb(235, 235, 235);
 }
 
-.form div{
-    display: inline-block;
-    color: white;
-    font-size: small;
-    padding: 5%;
+.bordered-bottom-row-darkgrey {
+    border-bottom: 1px solid rgb(199, 199, 199);
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+
+.result div {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
     border-radius: 50%;
-    background-color: greenyellow;
+    color: #fff;
+}
+
+.win {
+    background-color: #44ee00;
+    color: #fff
+}
+
+.draw {
+    background-color: #999;
+    color: #fff
+}
+
+.loss {
+    background-color: #f00;
+    color: #fff
 }

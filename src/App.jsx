@@ -1,4 +1,4 @@
-import FootballTable from "./pages/footballTable";
+import FootballTable from "./pages/FootballTable";
 
 export default function App() {
   return (
