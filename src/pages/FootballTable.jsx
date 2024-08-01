@@ -1,36 +1,46 @@
 import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchData } from '../redux/actions';
+import { Link } from 'react-router-dom';
 import '../App.css'
 
 export default function FootballTable() {
 
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.data)
   const specificBorderRows = [1, 4, 5, 17]; // Indices of rows to have the specific border color
 
   useEffect(() => {
-    fetch("/data.json")
-      .then(res => res.json())
-      .then(jsonData => {
-        if (jsonData.matches) {
-          setData(jsonData.matches)
-        } else {
-          console.log("No matches found");
-        }
-      })
-      .catch(error => console.log("Error fetching data:", error))
-  }, [])
+    dispatch(fetchData());
+  }, [dispatch]);
+
+  // useEffect(() => {
+  //   fetch("/data.json")
+  //     .then(res => res.json())
+  //     .then(jsonData => {
+  //       if (jsonData.matches) {
+  //         setData(jsonData.matches)
+  //       } else {
+  //         console.log("No matches found");
+  //       }
+  //     })
+  //     .catch(error => console.log("Error fetching data:", error))
+  // }, [])
 
   // const footballData = JSON.stringify(data)
-
   return (
     <>
       <div className='font-type'>
 
         <main className='container'>
+          {/* {loading && <p>Loading...</p>}
+          {error && <p>Error: {error}</p>} */}
           <table className='table-margin'>
             <thead>
               <tr>
                 <th>Position</th>
-                <th>Club</th>
+                <th className='th-club'>Club</th>
                 <th>Played</th>
                 <th>Won</th>
                 <th>Drawn</th>
@@ -44,9 +54,8 @@ export default function FootballTable() {
             </thead>
             <tbody>
 
-
               {
-                data.map((team, index) => {
+                data.map((team, index, id) => {
 
                   const isSpecificBorderRow = specificBorderRows.includes(index + 1)
                   const rowClass = isSpecificBorderRow ? "bordered-bottom-row-darkgrey" : "bordered-bottom-row-lightgrey"
@@ -57,8 +66,10 @@ export default function FootballTable() {
                     <tr key={index} className={rowClass}>
                       <td className='text-center'>{team.position}</td>
                       <td className='align-items'>
-                        <img src={team.logo} style={{ width: "20px", marginRight: "8px"}} />
-                        {team.club}
+                        <img src={team.logo} style={{ width: "20px", marginRight: "8px" }} />
+                        <Link className='link-style' to={`/club-details/${team.id}`}>
+                          {team.club}
+                        </Link>
                       </td>
                       <td className='text-center'>{team.played}</td>
                       <td className='text-center'>{team.won}</td>

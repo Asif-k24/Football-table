@@ -73,6 +73,11 @@ th {
     font-weight: normal;
 }
 
+.th-club{
+    text-align: left;
+    padding-left: 15px;
+}
+
 .bordered-bottom-row-lightgrey {
     border-bottom: 1px solid rgb(235, 235, 235);
 }
@@ -94,22 +99,27 @@ th {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: x-small;
     border-radius: 50%;
     color: #fff;
 }
 
 .win {
-    background-color: #44ee00;
+    background-color: #3bd100;
     color: #fff
 }
 
 .draw {
-    background-color: #999;
+    background-color: #828282;
     color: #fff
 }
 
 .loss {
-    background-color: #f00;
+    background-color: rgb(223, 0, 0);
     color: #fff
+}
+
+.link-style{
+    text-decoration: none;
+    color: rgb(61, 61, 61);   
 }

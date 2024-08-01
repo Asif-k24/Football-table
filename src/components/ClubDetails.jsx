@@ -1,25 +1,24 @@
 import React, { useEffect } from 'react'
-import {useParams} from "react-router-dom"
+// import { useDispatch, useSelector } from 'react-redux';
+// import { fetchData } from '../redux/actions';
+import { Link, useParams } from 'react-router-dom';
+import '../App.css'
+
 
 export default function ClubDetails() {
 
+    const dispatch = useDispatch();
+    const data = useSelector((state) => state.data)
+
     useEffect(() => {
-        fetch("/data.json")
-            .then(res => res.json())
-            .then(data => {
-                setData(data)
-            })
-            .catch(err => {
-                return console.log("Error fetching data: ", err)
-            })
-    }, [])
-
-    const footballData = JSON.stringify(data)
-
+        dispatch(fetchData());
+    }, [dispatch]);
 
     return (
-        <div>
-            {footballData}
+        <div className='container'>
+            
+
+            <Link to={"/"}>Back</Link>
         </div>
     )
 }
