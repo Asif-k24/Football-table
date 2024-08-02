@@ -56,6 +56,10 @@
     text-align: center;
 }
 
+.text-left{
+    text-align: left;
+}
+
 .table-margin {
     margin: 1rem;
     border-style: none;
@@ -121,5 +125,44 @@ th {
 
 .link-style{
     text-decoration: none;
-    color: rgb(61, 61, 61);   
+    color: rgb(61, 61, 61);
+}
+
+.link-style div:hover{
+    color: rgb(43, 81, 147);
+    text-shadow: 2px 2px 5px rgb(127, 127, 127);
+}
+
+.back-link{
+    /* float: right; */
+    background-color: rgb(0, 166, 255);
+    text-decoration: none;
+    border-radius: 10%;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    color: white;
+    width: 10rem;
+    height: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: max-content;
+}
+
+.backLink{
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    text-decoration: 'none';
+}
+
+table.table-details{
+    /* border: 1px solid #3bd100; */
+    width: 80%;
+    height: 30rem;
+    margin: 0 auto;
+    /* max-width: max-content; */
 }
