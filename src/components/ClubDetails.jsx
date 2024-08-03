@@ -4,16 +4,14 @@ import { fetchData } from '../redux/actions';
 import { Link, useParams } from 'react-router-dom';
 import '../App.css'
 
-
 export default function ClubDetails() {
 
     const { teamId } = useParams();
     const dispatch = useDispatch();
-    const state = useSelector((state) => state.data.find(team => team.id === +teamId))
+    const state = useSelector((state) => state.data.find(team => team.id === + teamId))
     // const detail = useSelector((state) => state)
 
     useEffect(() => {
-
         dispatch(fetchData());
     }, [dispatch]);
 
@@ -84,9 +82,10 @@ export default function ClubDetails() {
                     <tr className='bordered-bottom-row-darkgrey'>
                         <td className="text-left">Team form</td>
                         <td className='text-center'>-</td>
-                        <td className='text-center result'>{data.form.map((result, idx) => (
-                            <div className={result === 'W' ? "win" : result === 'L' ? 'loss' : 'draw'} key={idx}>{result}</div>
-                        ))}
+                        <td className='text-center result'>
+                            {data.form.map((result, idx) => (
+                                <div className={result === 'W' ? "win" : result === 'L' ? 'loss' : 'draw'} key={idx}>{result}</div>
+                            ))}
                         </td>
                     </tr>
                 </tbody>

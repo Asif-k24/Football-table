@@ -83,7 +83,7 @@ th {
 }
 
 .bordered-bottom-row-lightgrey {
-    border-bottom: 1px solid rgb(235, 235, 235);
+    border-bottom: 1px solid rgb(241, 241, 241);
 }
 
 .bordered-bottom-row-darkgrey {
@@ -93,6 +93,7 @@ th {
 .result {
     display: flex;
     align-items: center;
+    height: 1rem;
     gap: 5px;
     justify-content: center;
 }
