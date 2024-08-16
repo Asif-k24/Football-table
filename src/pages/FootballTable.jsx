@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../redux/slice/dataSlice';
-import { useNavigate } from 'react-router-dom';
 import Modal from 'react-modal';
 import ClubLogo from "../assets/data"
 import '../App.css';
@@ -105,6 +104,7 @@ export default function FootballTable() {
   const specificBorderRows = [1, 4, 5, 17]; // Indices of rows to have the specific border color
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     dispatch(fetchData());
   }, [dispatch]);
 
