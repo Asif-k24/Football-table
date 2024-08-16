@@ -1,8 +1,8 @@
-import { createStore, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import { thunk } from 'redux-thunk';
-import dataReducer from './reducers';
+import { configureStore } from "@reduxjs/toolkit";
+import dataReducer from "./slice/dataSlice"
 
-const store = createStore(dataReducer, composeWithDevTools(applyMiddleware(thunk)));
-
-export default store;
+export const store = configureStore({
+    reducer: {
+        data: dataReducer,
+    }
+})

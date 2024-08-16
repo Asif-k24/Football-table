@@ -124,12 +124,12 @@ th {
     color: #fff
 }
 
-.link-style{
+.button-style{
     text-decoration: none;
     color: rgb(61, 61, 61);
 }
 
-.link-style div:hover{
+.button-style div:hover{
     color: rgb(43, 81, 147);
     text-shadow: 2px 2px 5px rgb(127, 127, 127);
 }

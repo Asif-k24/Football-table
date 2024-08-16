@@ -1,29 +1,44 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchData } from '../redux/actions';
+import { fetchData } from '../redux/slice/dataSlice';
 import { Link, useParams } from 'react-router-dom';
+import ClubLogo from "../assets/data"
 import '../App.css'
 
 export default function ClubDetails() {
 
     const { teamId } = useParams();
     const dispatch = useDispatch();
-    const state = useSelector((state) => state.data.find(team => team.id === + teamId))
+    const state = useSelector((state) => state.data.processedData.find((team, index) => index == + teamId))
     // const detail = useSelector((state) => state)
+    // console.log(state);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         dispatch(fetchData());
     }, [dispatch]);
 
     const data = state
+    const teamLogo = ClubLogo.logo
+    const teamName = data?.club
 
-    console.log(data);
+    // console.log(data);
+    if (!data) {
+        return "No data found"
+    }
+
+    // const 
+
+    // console.log(teamName);
+    // console.log(data, teamId);
 
     return (
         <main className='container font-type'>
             {/* <pre>{JSON.stringify(state, null, 2)}</pre> */}
             <div style={{ textAlign: "center" }}>
-                <img src={data.logo} style={{ borderRadius: "50%", width: "15rem", height: "15rem" }} />
+                {
+                    teamLogo?.[teamName] && <img src={teamLogo?.[teamName]} style={{ borderRadius: "50%", width: "15rem", height: "15rem" }} />
+                }
             </div>
 
             <table className='table-details'>
@@ -37,7 +52,7 @@ export default function ClubDetails() {
                     <tr className='bordered-bottom-row-lightgrey'>
                         <td className='text-left'>Club</td>
                         <td className='text-center'>-</td>
-                        <td className='text-center'>{data.club}</td>
+                        <td className='text-center'>{teamName}</td>
                     </tr>
                     <tr className='bordered-bottom-row-darkgrey'>
                         <td className='text-left'>Matches played</td>
@@ -60,7 +75,7 @@ export default function ClubDetails() {
                         <td className='text-center'>{data.lost}</td>
                     </tr>
                     <tr className='bordered-bottom-row-darkgrey'>
-                        <td className='text-left'>Goals scored - {data.gf}</td>
+                        <td className='text-left'>Goals scored</td>
                         <td className='text-center'>-</td>
                         <td className='text-center'>{data.gf}</td>
                     </tr>
@@ -82,10 +97,12 @@ export default function ClubDetails() {
                     <tr className='bordered-bottom-row-darkgrey'>
                         <td className="text-left">Team form</td>
                         <td className='text-center'>-</td>
-                        <td className='text-center result'>
-                            {data.form.map((result, idx) => (
-                                <div className={result === 'W' ? "win" : result === 'L' ? 'loss' : 'draw'} key={idx}>{result}</div>
-                            ))}
+                        <td className='text-center'>
+                            <div className='result'>
+                                {data.form.map((result, idx) => (
+                                    <div className={result === 'W' ? "win" : result === 'L' ? 'loss' : 'draw'} key={idx}>{result}</div>
+                                ))}
+                            </div>
                         </td>
                     </tr>
                 </tbody>

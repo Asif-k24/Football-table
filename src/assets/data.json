@@ -1,0 +1,25 @@
+ {
+  "name": "Premier League 2020/21",
+  "logo": {
+    "Chelsea FC": "assets/images/Chelsea.png",
+    "Liverpool FC": "assets/images/Liverpool.png",
+    "Leicester City FC": "assets/images/LeicesterCity.png",
+    "Tottenham Hotspur FC": "assets/images/TottenhamHotspurs.png",
+    "Southampton FC": "assets/images/SouthHampton.png",
+    "Aston Villa FC": "assets/images/AstonVilla.png",
+    "Manchester City FC": "assets/images/ManchesterCity.png",
+    "Crystal Palace FC": "assets/images/CrystalPalace.png",
+    "Everton FC": "assets/images/Everton.png",
+    "Wolverhampton Wanderers FC": "assets/images/Wolverhampton.png",
+    "Arsenal FC": "assets/images/Arsenal.png",
+    "West Ham United FC": "assets/images/WesthamUnited.png",
+    "Manchester United FC": "assets/images/ManchesterUnited.png",
+    "Newcastle United FC": "assets/images/NewCastleUnited.png",
+    "Leeds United FC": "assets/images/LeedsUnited.png",
+    "Brighton & Hove Albion FC": "assets/images/BrightonAndHoveAlbion.png",
+    "Fulham FC": "assets/images/Fullham.png",
+    "West Bromwich Albion FC": "assets/images/WestBromwichAlbion.png",
+    "Burnley FC": "assets/images/Burnley.png",
+    "Sheffield United FC": "assets/images/SheffieldUnited.png"
+  }
+}
