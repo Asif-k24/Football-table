@@ -13,8 +13,6 @@ export default function FootballTable() {
 
   const dispatch = useDispatch();
   const { loading, error, processedData } = useSelector((state) => state.data);
-  // const navigate = useNavigate()
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedTeam, setSelectedTeam] = useState(null);
 
@@ -44,6 +42,7 @@ export default function FootballTable() {
       <div className='font-type'>
 
         <main className='container'>
+          <h1 className='text-center'>Premier League Table 2020/2021</h1>
           <table className='table-margin'>
             <thead>
               <tr>
@@ -83,13 +82,11 @@ export default function FootballTable() {
                             <img style={{ width: "20px", borderRadius: "50%", marginRight: "8px" }} src={'/' + ClubLogo.logo[team.club]} alt="" />
                           ) : ('No Logo')
                         }
-                        {/* <Link className='link-style' to={`/club-details/` + index}> */}
                         <button onClick={() => handleRowClick(team)} className='button-style' style={{ all: 'unset', cursor: 'pointer' }}>
                           <div>
                             {team.club}
                           </div>
                         </button>
-                        {/* </Link> */}
                       </td>
                       <td className='text-center'>{team.played}</td>
                       <td className='text-center'>{team.won}</td>

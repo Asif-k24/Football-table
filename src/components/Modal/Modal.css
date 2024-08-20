@@ -7,10 +7,11 @@
     /* margin-Right: -50%; */
     top: 50%;
     left: 50%;
-
     overflow-y: auto;
     max-height: 80vh;
     border-radius: 10px;
+    font-family: system-ui;
+    font-size: small;
 }
 
 .overlay {
@@ -20,9 +21,4 @@
     left: 0;
     right: 0;
     bottom: 0;
-}
-
-.modal-content {
-    max-height: 60vh;
-    overflow-y: auto;
 }
