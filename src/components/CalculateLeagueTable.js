@@ -42,8 +42,8 @@ const CalculateLeagueTable = (data) => {
 
 
         if (score?.ft) {
-            /* Calculates the played matches by checking the number of times the team
-        has been mentioned or repeated. */
+            // Calculates the played matches by checking the number of times the team
+            // has been mentioned or repeated.
             teams[team1].played += 1;   // increments the number of games played by team1
             teams[team2].played += 1;   // increments the number of games played by team1
             const [score1, score2] = score.ft;
