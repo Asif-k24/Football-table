@@ -72,10 +72,12 @@ export const ModalComponent = ({ isOpen, onRequestClose, data }) => {
                         <tr className='bordered-bottom-row-darkgrey'>
                             <td className="text-left">Team form</td>
                             <td className='text-center'>-</td>
-                            <td className='text-center result'>
-                                {data?.form.map((result, idx) => (
-                                    <div className={result === 'W' ? "win" : result === 'L' ? 'loss' : 'draw'} key={idx}>{result}</div>
-                                ))}
+                            <td className='text-center'>
+                                <div className="result">
+                                    {data?.form.map((result, idx) => (
+                                        <div className={result === 'W' ? "win" : result === 'L' ? 'loss' : 'draw'} key={idx}>{result}</div>
+                                    ))}
+                                </div>
                             </td>
                         </tr>
                     </tbody>
