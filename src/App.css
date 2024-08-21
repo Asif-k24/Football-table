@@ -56,7 +56,7 @@
     text-align: center;
 }
 
-.text-left{
+.text-left {
     text-align: left;
 }
 
@@ -77,7 +77,7 @@ th {
     font-weight: normal;
 }
 
-.th-club{
+.th-club {
     text-align: left;
     padding-left: 15px;
 }
@@ -124,17 +124,17 @@ th {
     color: #fff
 }
 
-.button-style{
+.button-style {
     text-decoration: none;
     color: rgb(61, 61, 61);
 }
 
-.button-style div:hover{
+.button-style div:hover {
     color: rgb(43, 81, 147);
     text-shadow: 2px 2px 5px rgb(127, 127, 127);
 }
 
-.back-link{
+.back-link {
     /* float: right; */
     background-color: rgb(0, 166, 255);
     text-decoration: none;
@@ -153,17 +153,35 @@ th {
     max-width: max-content;
 }
 
-.backLink{
+.backLink {
     color: white;
     font-weight: bold;
     padding: 1rem;
     text-decoration: 'none';
 }
 
-table.table-details{
+table.table-details {
     /* border: 1px solid #3bd100; */
     width: 80%;
     height: 30rem;
     margin: 0 auto;
     /* max-width: max-content; */
+}
+
+/* For WebKit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    /* Rounded corners for the scrollbar thumb */
 }
