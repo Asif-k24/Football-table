@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../redux/slice/dataSlice';
 import { ModalComponent } from '../components/Modal/Modal';
 import Modal from 'react-modal';
-import ClubLogo from "../assets/data"
+import ClubLogo from "../assets/data.json"
 import '../App.css';
 import '../components/Modal/Modal.css'
 
@@ -60,8 +60,7 @@ export default function FootballTable() {
               </tr>
             </thead>
 
-            {<tbody>
-
+            <tbody>
               {
                 processedData?.map((team, index) => {
 
@@ -107,7 +106,7 @@ export default function FootballTable() {
                   )
                 })
               }
-            </tbody>}
+            </tbody>
 
           </table>
 

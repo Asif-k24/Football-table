@@ -2,7 +2,8 @@ const CalculateLeagueTable = (data) => {
 
     const teams = {};
 
-    console.log(data)
+    // console.log(teams);
+
     // Iterate through each match to calculate points and games played
     data?.matches?.forEach((match) => {
 
@@ -96,6 +97,8 @@ const CalculateLeagueTable = (data) => {
     leagueTable.forEach((team, index) => {
         team.position = index + 1
     })
+    // console.log(leagueTable);
+
     return leagueTable;
 };
 

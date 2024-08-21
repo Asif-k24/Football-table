@@ -69,6 +69,9 @@ thead {
     border-style: none;
     background: #f5f5f5;
     color: rgb(107, 107, 107);
+    top: 0;
+    position: sticky;
+    z-index: 0;
 }
 
 th {
