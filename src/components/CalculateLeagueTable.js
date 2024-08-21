@@ -59,7 +59,7 @@ const CalculateLeagueTable = (data) => {
             if (score1 > score2) {
                 teams[team1].points = teams[team1].points + 3;
                 teams[team1].won = teams[team1].won + 1;
-                teams[team2].points = teams[team2].points - 1;
+                teams[team2].points = teams[team2].points + 0;
                 teams[team2].lost = teams[team2].lost + 1;
 
                 // Add form (W for win, L for loss)
@@ -68,7 +68,7 @@ const CalculateLeagueTable = (data) => {
             } else if (score2 > score1) {
                 teams[team2].points = teams[team2].points + 3;
                 teams[team2].won = teams[team2].won + 1;
-                teams[team1].points = teams[team1].points - 1;
+                teams[team1].points = teams[team1].points + 0;
                 teams[team1].lost = teams[team1].lost + 1;
 
                 // Add form (L for loss, W for win)
