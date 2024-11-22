@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { ModalComponent } from '../components/Modal/Modal';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../redux/slice/dataSlice';
-import { ModalComponent } from '../components/Modal/Modal';
-import Modal from 'react-modal';
+import React, { useState, useEffect } from 'react';
 import ClubLogo from "../assets/data.json"
-import '../App.css';
 import '../components/Modal/Modal.css'
+import Modal from 'react-modal';
+import '../App.css';
 
 Modal.setAppElement('#root');
 
